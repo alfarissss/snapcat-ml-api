@@ -9,7 +9,7 @@ The source code of machine learning model's API of SnapCat in order to complete 
 - nanti
 
 # Dataset Reasource
-- [Kaggle] https://www.kaggle.com/datasets/shawngano/gano-cat-breed-image-collection/data
+- [Kaggle] (https://www.kaggle.com/datasets/shawngano/gano-cat-breed-image-collection/data)
 
 # API Endpoint
 |   Endpoint   |   Method   | Body Sent (JSON) |              Description              |
