@@ -3,6 +3,7 @@
 The source code of machine learning model's API of SnapCat in order to complete Bangkit Capstone Project
 
 # API URL
+Example :
 - https://snapcat-image.example/prediction
 
 # Dataset Reasource
