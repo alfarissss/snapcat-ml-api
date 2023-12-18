@@ -46,7 +46,8 @@ The source code of machine learning model's API of SnapCat in order to complete 
 
 
 ## Architecture of SSD EfficientnetB0 for Cat Breeds Detection
-- ini juga nanti fotonya
+![image](https://github.com/alfarissss/snapcat-ml-api/assets/134893804/3a9aefe9-ee82-4caf-a8eb-7bcd8c1bc3f1)
+
 
 # References
 - Karlita, T., Choirunisa, N. A., Asmara, R., & Setyorini, F. (2022). Cat Breeds Classification Using Compound Model Scaling Convolutional Neural Networks. Dalam Proceedings of the International Conference on Applied Science and Technology on Social Science 2021 (iCAST-SS 2021) (hlm. 909-914). Atlantis Press. DOI: 10.2991/assehr.k.220301.150 [Atlantis Press](https://www.atlantis-press.com/proceedings/icast-ss-21/125971139)
