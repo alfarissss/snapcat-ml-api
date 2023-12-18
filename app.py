@@ -76,18 +76,9 @@ def index():
         "data": None,
     }), 200
 
-@app.route("/prediction", methods=["GET", "POST"])
+@app.route("/prediction", methods=["POST"])
 def prediction():
-    if request.method == "GET":
-        return jsonify({
-            "status": {
-                "code": 405,
-                "message": "Method Not Allowed",
-            },
-            "data": None,
-        }), 405
-
-    elif request.method == "POST":
+    if request.method == "POST":
         if "image" not in request.files:
             return jsonify({
                 "status": {
