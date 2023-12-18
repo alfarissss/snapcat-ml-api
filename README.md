@@ -19,7 +19,8 @@ The source code of machine learning model's API of SnapCat in order to complete 
 
 
 # The flow of Machine Learning Service
-![image](https://github.com/alfarissss/snapcat-ml-api/assets/134893804/890fff67-cf95-4bca-aa11-67f46667541a)
+![image](https://github.com/alfarissss/snapcat-ml-api/assets/134893804/000ae39d-9fe3-488d-8ab6-5250ac654cd0)
+
 
 
 
