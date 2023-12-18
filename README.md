@@ -1,4 +1,4 @@
-# bangkit-machine-learning
+# Bangkit-Machine-Learning
 
 The source code of machine learning model's API of SnapCat in order to complete Bangkit Capstone Project
 
