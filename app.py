@@ -92,7 +92,7 @@ def prediction():
             return jsonify({
                 "status": {
                     "code": 400,
-                    "message": "Bad request, no image part",
+                    "message": "Bad Request, no image part",
                 },
                 "data": None,
             }), 400
@@ -103,7 +103,7 @@ def prediction():
             return jsonify({
                 "status": {
                     "code": 400,
-                    "message": "Bad request, unsupported file format or no selected file",
+                    "message": "Bad Request, unsupported file format or no selected file",
                 },
                 "data": None,
             }), 400
