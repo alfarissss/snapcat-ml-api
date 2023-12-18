@@ -6,7 +6,7 @@ The source code of machine learning model's API of SnapCat in order to complete 
 - nanti
 
 # API URL
-- nanti
+- https://snapcat-image.example/prediction
 
 # Dataset Reasource
 - [Kaggle](https://www.kaggle.com/datasets/shawngano/gano-cat-breed-image-collection/data)
@@ -40,8 +40,10 @@ The source code of machine learning model's API of SnapCat in order to complete 
 - Input the image that you want predict as a value of the key
 - Send the request
 
-- ini gambarnya nanti
-- ini gambar 2
+![image](https://github.com/alfarissss/snapcat-ml-api/assets/134893804/8d790a17-5cdb-4d8f-bac5-4daced1b1789)
+
+![image](https://github.com/alfarissss/snapcat-ml-api/assets/134893804/6f84e930-2fe6-4d19-a08e-b977ed5e5096)
+
 
 ## Architecture of SSD EfficientnetB0 for Cat Breeds Detection
 - ini juga nanti fotonya
