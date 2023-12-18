@@ -2,14 +2,12 @@
 
 The source code of machine learning model's API of SnapCat in order to complete Bangkit Capstone Project
 
-# Model Building's Notebook
-- nanti
-
 # API URL
 - https://snapcat-image.example/prediction
 
 # Dataset Reasource
 - [Kaggle](https://www.kaggle.com/datasets/shawngano/gano-cat-breed-image-collection/data)
+- We also try to make data augmentation using python in local folder so the image can bigger than dataset from kaggle.
 
 # API Endpoint
 |   Endpoint   |   Method  | Body Sent (JSON) |                    Description                     |
@@ -20,9 +18,6 @@ The source code of machine learning model's API of SnapCat in order to complete 
 
 # The flow of Machine Learning Service
 ![flowchart snapcat-ml-api](https://github.com/alfarissss/snapcat-ml-api/assets/134893804/199f4181-bcef-4ea2-80c0-bfcd931fd95c)
-
-
-
 
 
 # How to run this Flask app
