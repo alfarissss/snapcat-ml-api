@@ -112,12 +112,12 @@ def prediction():
         return jsonify({
             "status": {
                 "code": 200,
-                "photo": request.host_url + image_path,
                 "message": "Success Predict!",
             },
             "data": {
                 "Cat_breed_Predictions": predicted_label,
                 "Cat_breed_Description": cat_breed_description,
+                "photo": request.host_url + image_path,
                 "confidence": confidence,
             }
         }), 200
