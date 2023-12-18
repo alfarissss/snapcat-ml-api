@@ -12,11 +12,11 @@ The source code of machine learning model's API of SnapCat in order to complete 
 - [Kaggle](https://www.kaggle.com/datasets/shawngano/gano-cat-breed-image-collection/data)
 
 # API Endpoint
-|   Endpoint   |   Method   | Body Sent (JSON) |              Description              |
-|   :------:   | :--------: | :--------------: | :-----------------------------------: |
-|      /       |     GET    |       None       |   HTTP GET REQUEST Testing Endpoint   |
-|    /404      | GET & POST |     Anything     |         404 NOT FOUND Endpoint        |
-| /prediction  |    POST    | file: Image file | HTTP POST REQUEST Prediction Endpoint |
+|   Endpoint   |   Method  | Body Sent (JSON) |                    Description                     |
+|   :------:   | :-------: | :--------------: | :------------------------------------------------: |
+|      /       |    GET    |       None       |          HTTP GET REQUEST Testing Endpoint         |
+| /prediction  |    POST   | file: Image file |        HTTP POST REQUEST Prediction Endpoint       |
+
 
 # The flow of Machine Learning Service
 - nanti dibuat flowchartnya
