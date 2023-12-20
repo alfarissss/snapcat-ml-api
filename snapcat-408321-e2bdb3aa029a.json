@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "snapcat-408321",
+  "private_key_id": "e2bdb3aa029af88e9d842274e08cc0c88d666c95",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPaWt5OMUOhmSV\nERduORtpUM5ZobpwptXGqHmiAwGGBNq9uONJ9606bcQrkmxwANAj993LMh+DelXB\nEeXyrr9qlK95iIid942Vz+gnRbNXCv7BXHe+qik5kxxdNm22VLqjote+rOcOkLuZ\n0kiEaUeOOT4YfCgqU8jKl9GXZWHOEqTwwstWMJ5OUOPGtpSR4Rtp+OBcdZVlXvHx\nDWkyjkE4IWbKLnMkVCD9QT5Po//MBYOcfSGNol8v6zZkkn+4rCtl77wYZXSgEvm5\n7k6GcPa+LnuMUUvktEkcmwnXKcwBXv1yOz1IcRyuC+L79nb8mzBCqjzlWqe8XNAK\nGpBCAk/9AgMBAAECggEAKGJt1yoLEGNxhSbRSZhb8nsV2pTnYNTTLf2SxU1RiB88\n2hD8TGQpugUyW4uEiqBV5pL2AADv6uEwfkm2XLTSt3Vg30iK1TskucVD/hWPsESH\nSu3usNSf90JiFPIqlYRU3NSxrkIrMQZUSMSNcx6unI4fvZO7HFa4811xJUnLq9xS\nrbAqjCLHeJZrqfhPwq3peSVebxuseEwh2OAQKeJyQxJw4OU0ixIg96LITkBxxYLg\nAPnbcSdJBlOK5IH5tH9e8ZHmVUSHlUSCO11ZaJe+/eNYZZxmd6icnvosfzg9BOLU\noOTvwya4DShSCEeLkww4qZZZoWw+9yt9t2OOHRk1LwKBgQDvaPeNRF0WEVV8HuJl\ngwn+Wp7BZUHYHmoMGoJ+W+o99yoJSQxd/mUI6OSRvrykRcZwkPwlb0C73teRaMPv\nPR9gcAH2VvM4AG3bSXVEDPEd2u6PsWldi+E+l8VU7+8FqAg5lbzAjrDfC4HQtUtc\nDLL4U5zwKj34zUWA0Ui2LxuRWwKBgQDdyNFTlwp1pLwBFMusRkm20DNHjSSFVcpV\nZGRlzxhebLy+ztdc/o8bah8lN7k5hTXTV2F6sGW/QCxYqDYo6d5vmZOyStAZdYsR\nisW42piP0cyR1AI9nELKVDqZOE4Zg1ySnWXogaXvfwrYULAQPgWx+/i4zIc8AD6u\n6N4ZfxlLhwKBgQCK4MghoZOiFoIRU1Ufb8lfTDAlndh5RwNbbBFgvW7/bR5sbnyH\nFeiEJ51X0l5ZqMQ5TlGGYagak2VXS3/Fix5lcfQhc0T5qn4Po+grhppkKDkVD+RA\nSMFr7tygreJo1JWY2fy5csy1RlaSvGgvyIoVNWOnicmTR3hXBpB4ZpFGWwKBgANq\nIRbpX2baR2641D3twxrGb9OtL5/B52CTMByFKLnjcLB7XMN4w9lHM/2NsxNYorCD\nSuPprVdZdJVU2aidmSgctDJthnCt55s4iLzE2M52C3E/U12Bd2HIFDLhtAoehKFZ\nPQVsYZKjYRZdf6hwXAQWfgjSVU6uLkjhGvJHi6snAoGAEYh1gyod7WJAHyksaZxA\nT788Uakqs8HfVTigqxFxdTEeu+COheYAconJKLB1+qaBRlJlpsL1DmFDOcKs5POu\nTD3PmaQ8gP/gbbVJGqqKYdceEOBEIGuyeSIjUkapPchx1ZZKVBynq5910l1dRG+T\nyyLJSQ7WekaIWengqgLH5Ts=\n-----END PRIVATE KEY-----\n",
+  "client_email": "snapcat-sa@snapcat-408321.iam.gserviceaccount.com",
+  "client_id": "114659259853629356572",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/snapcat-sa%40snapcat-408321.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

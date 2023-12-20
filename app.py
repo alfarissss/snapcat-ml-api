@@ -1,4 +1,5 @@
 import os
+import io
 import numpy as np
 import tensorflow as tf
 from flask import Flask, jsonify, request
@@ -6,10 +7,12 @@ from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.efficientnet import preprocess_input
+from google.cloud import storage  # manambahkan import untuk Google Cloud Storage
+from google.oauth2 import service_account
 
 app = Flask(__name__)
 app.config["ALLOWED_EXTENSIONS"] = set(['png', 'jpg', 'jpeg'])
-app.config["UPLOAD_FOLDER"] = "static/uploads/"
+# app.config["UPLOAD_FOLDER"] = "static/uploads/"
 model = load_model("EfficientNet_model_cat_prediction91.h5", compile=False)
 
 # Load labels
@@ -48,6 +51,11 @@ cat_descriptions = {
    
     'Tuxedo': "WITH ITS DISTINCTIVE BLACK AND WHITE COAT, EXUDES CHARM AND ELEGANCE. Originating from various cat breeds, the Tuxedo cat is characterized by its distinctive black and white coat resembling formal wear. Their striking appearance has earned them the name 'Tuxedo.' These cats can be found in various patterns, showcasing a blend of sophistication and playfulness. The Tuxedo cat, a delightful companion, adds a touch of class to any home."
 }
+
+# Inisialisasi klien Google Cloud Storage
+storage_client = storage.Client.from_service_account_json("snapcat-408321-e2bdb3aa029a.json")
+bucket_name = "snapcat-cc-bucket"  # Ganti dengan nama bucket yang sesuai
+bucket = storage_client.bucket(bucket_name)
 
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1] in app.config["ALLOWED_EXTENSIONS"]
@@ -89,6 +97,7 @@ def prediction():
             }), 400
 
         image_file = request.files["image"]
+        image_bytes = io.BytesIO(image_file.read())
 
         if image_file.filename == "" or not allowed_file(image_file.filename):
             return jsonify({
@@ -100,11 +109,22 @@ def prediction():
             }), 400
 
         filename = secure_filename(image_file.filename)
-        image_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)
-        image_file.save(image_path)
+        # image_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)
+        # image_file.save(image_path)
+
+        #create empty folder
+        blob = bucket.blob("img/" + filename)
+        blob.upload_from_file(image_bytes, content_type="image/jpeg")
+
+        # Simpan gambar ke Google Cloud Storage
+        blob = bucket.blob(filename)
+
+        # Construct public URL untuk gambar yang diunggah
+        image_url = f"https://storage.googleapis.com/{bucket_name}/{filename}"
 
         # Preprocess image
-        img_array = preprocess_input_image(image_path)
+        # img_array = preprocess_input_image(image_path)
+        img_array = preprocess_input_image(image_bytes)
 
         # Make prediction
         predicted_label, confidence, cat_breed_description = predict_cat_breed(img_array)
@@ -117,7 +137,8 @@ def prediction():
             "data": {
                 "Cat_breed_Predictions": predicted_label,
                 "Cat_breed_Description": cat_breed_description,
-                "photo": request.host_url + image_path,
+                # "photo": request.host_url + image_path,
+                "picture": image_url,
                 "confidence": confidence,
             }
         }), 200
