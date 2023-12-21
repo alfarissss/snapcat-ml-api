@@ -109,18 +109,33 @@ def prediction():
         # Make prediction
         predicted_label, confidence, cat_breed_description = predict_cat_breed(img_array)
 
-        return jsonify({
-            "status": {
-                "code": 200,
-                "message": "Success Predict!",
-            },
-            "data": {
-                "cat_breed_predictions": predicted_label,
-                "cat_breed_description": cat_breed_description,
-                "upload_image": request.host_url + image_path,
-                "confidence": confidence,
-            }
-        }), 200
+        # Check confidence threshold
+        if confidence >= 0.5:
+            return jsonify({
+                "status": {
+                    "code": 200,
+                    "message": "Success Predict!",
+                },
+                "data": {
+                    "cat_breed_predictions": predicted_label,
+                    "cat_breed_description": cat_breed_description,
+                    "upload_image": request.host_url + image_path,
+                    "confidence": confidence,
+                }
+            }), 200
+        else:
+            return jsonify({
+                "status": {
+                    "code": 200,
+                    "message": "Image is unclear or not a cat",
+                },
+                "data": {
+                    "cat_breed_predictions": None,
+                    "cat_breed_description": None,
+                    "upload_image": request.host_url + image_path,
+                    "confidence": confidence,
+                }
+            }), 200
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
